@@ -1,0 +1,17 @@
+#################################
+#	File:   td_localisation.csv
+#	Author: Chris Saiko
+#	Desc:   Toph's Debug Localisation File
+#         Windows 1252 encoding
+#################################
+
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+#TITLES
+td_destroy_title;Destroy Title (Safe);;;;;;;;;;;;;x
+td_destroy_title_desc;Destroy §Y[Root.GetFullName]§! safely. Destroys the landed title.;;;;;;;;;;;;;x
+
+td_unsafe_destroy_title;Destroy Title (Unsafe);;;;;;;;;;;;;x
+td_unsafe_destroy_title_desc;Destroy §Y[Root.GetFullName]§! unsafely. Bypasses some error-checking, allowing to destroy landless titles.;;;;;;;;;;;;;x

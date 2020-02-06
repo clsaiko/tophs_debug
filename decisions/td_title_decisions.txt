@@ -1,0 +1,56 @@
+#################################
+#	File:	td_title_decisions.txt
+#	Author:	Chris Saiko
+# 	Desc:	Toph's Debug Title Decisions
+#           td_destroy_title
+#           td_unsafe_destroy_title
+#################################
+
+title_decisions = {
+
+    td_destroy_title = {
+        only_playable = yes
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 120
+
+        from_potential = { ai = no }
+
+        potential = { always = yes }
+
+        allow = { always = yes }
+
+        effect = {
+            ROOT = { destroy_landed_title = THIS }
+        }
+
+        revoke_allowed = { always = no }
+
+        ai_will_do = { factor = 0 }
+
+    }#end td_destroy_title
+
+    td_unsafe_destroy_title = {
+        only_playable = yes
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 120
+
+        from_potential = { ai = no }
+
+        potential = { always = yes }
+
+        allow = { always = yes }
+
+        effect = {
+            ROOT = { unsafe_destroy_landed_title = THIS }
+        }
+
+        revoke_allowed = { always = no }
+
+        ai_will_do = { factor = 0 }
+
+    }#end td_destroy_title
+
+
+}#end title_decisions
