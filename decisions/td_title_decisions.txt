@@ -113,4 +113,29 @@ title_decisions = {
         ai_will_do = { factor = 0 }
     }#end td_vassalize
 
+    # Forcefully usurp this title
+    td_force_usurp = {
+        only_playable = yes
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 120
+
+        from_potential = { ai = no }
+
+        potential = { always = yes }
+
+        allow = { always = yes }
+
+        effect = {
+
+            # Usurp this title
+            ROOT = { usurp_title = FROM }
+
+        }
+
+        revoke_allowed = { always = no }
+
+        ai_will_do = { factor = 0 }
+    }#end td_force_usurp
+
 }#end title_decisions

@@ -11,10 +11,10 @@
 
 #TITLES
 td_destroy_title;(TD) Destroy Title (Safe);;;;;;;;;;;;;x
-td_destroy_title_desc;Destroy §Y[Root.GetFullName]§! safely. Destroys the landed title.;;;;;;;;;;;;;x
+td_destroy_title_desc;Destroy the title §Y[Root.GetFullName]§! safely. Destroys the landed title.;;;;;;;;;;;;;x
 
 td_unsafe_destroy_title;(TD) Destroy Title (Unsafe);;;;;;;;;;;;;x
-td_unsafe_destroy_title_desc;Destroy §Y[Root.GetFullName]§! unsafely. Bypasses some error-checking, allowing to destroy landless titles.;;;;;;;;;;;;;x
+td_unsafe_destroy_title_desc;Destroy the title §Y[Root.GetFullName]§! unsafely. Bypasses some error-checking, allowing to destroy landless titles.;;;;;;;;;;;;;x
 
 td_make_independent;(TD) Make Independent;;;;;;;;;;;;;x
 td_make_independent_desc;§Y[Root.Holder.GetFullName]§! becomes independent.;;;;;;;;;;;;;x
@@ -24,3 +24,6 @@ td_vassalize_desc;Vassalize §Y[Root.Holder.GetFullName]§!.;;;;;;;;;;;;;x
 
 td_kill_char;(TD) Natural Death;;;;;;;;;;;;;x
 td_kill_char_desc;End the life of §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x
+
+td_force_usurp;(TD) Force Usurp;;;;;;;;;;;;;x
+td_force_usurp_desc;Forcefully usurp the title §Y[Root.GetFullName]§! from §Y[Root.Holder.GetFullName]§!.;;;;;;;;;;;;;x
