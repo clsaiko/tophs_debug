@@ -1,0 +1,39 @@
+#################################
+#	File:	td_targeted_decisions.txt
+#	Author:	Chris Saiko
+# 	Desc:	Toph's Debug Targeted Decisions
+#
+#			Kill Character
+#
+#################################
+
+
+targeted_decisions = {
+
+    # Kill a character dead
+    td_kill_char = {
+        filter = all
+        ai_target_filter = self
+        ai_check_interval = 24 # Determines how seldom the AI checks whether they can and should do the decision, in months. By default 1 (every month).
+        from_potential = {
+            #Conditions on the decision taker for the decision to appear.
+            ai = no								#no AI usage
+            is_playable = yes					#playable characters only
+        }#end from_potential block
+
+        potential = {
+            is_alive = yes
+        }#end potential block
+
+        allow = {
+            #Conditions for the decision to be enabled
+            always = yes
+        }#end allow block
+
+        effect = {
+            #Commands executed when taking the decision
+            death = { death_reason = death_natural }
+        }#end effect block
+    }#end td_kill_char
+
+}#end targeted_decisions

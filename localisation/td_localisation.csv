@@ -21,3 +21,6 @@ td_make_independent_desc;§Y[Root.Holder.GetFullName]§! becomes independent.;;;;;
 
 td_vassalize;(TD) Vassalize;;;;;;;;;;;;;x
 td_vassalize_desc;Vassalize §Y[Root.Holder.GetFullName]§!.;;;;;;;;;;;;;x
+
+td_kill_char;(TD) Natural Death;;;;;;;;;;;;;x
+td_kill_char_desc;End the life of §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x
