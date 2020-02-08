@@ -8,6 +8,7 @@
 
 title_decisions = {
 
+    # Destroy a landed title
     td_destroy_title = {
         only_playable = yes
         filter = all
@@ -16,7 +17,10 @@ title_decisions = {
 
         from_potential = { ai = no }
 
-        potential = { always = yes }
+        potential = {   #doesn't work on baron and counts anyway
+            NOT = { tier = count }
+            NOT = { tier = baron }
+        }
 
         allow = { always = yes }
 
@@ -27,10 +31,61 @@ title_decisions = {
         revoke_allowed = { always = no }
 
         ai_will_do = { factor = 0 }
-
     }#end td_destroy_title
 
+    # Unsafely destroy a landed title
     td_unsafe_destroy_title = {
+        only_playable = yes
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 120
+
+        from_potential = { ai = no }
+
+        potential = {   #doesn't work on baron and counts anyway
+            NOT = { tier = count }
+            NOT = { tier = baron }
+        }
+
+        allow = { always = yes }
+
+        effect = {
+            ROOT = { unsafe_destroy_landed_title = THIS }
+        }
+
+        revoke_allowed = { always = no }
+
+        ai_will_do = { factor = 0 }
+    }#end td_destroy_title
+
+    # Make holder of this title independent
+    td_make_independent = {
+        only_playable = yes
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 120
+
+        from_potential = { ai = no }
+
+        potential = {
+            ROOT = { holder_scope = { independent = no } }
+        }
+
+        allow = { always = yes }
+
+        effect = {
+
+            # Make title independent
+            ROOT = { holder_scope = { set_defacto_liege = THIS } }
+        }
+
+        revoke_allowed = { always = no }
+
+        ai_will_do = { factor = 0 }
+    }#end td_make_independent
+
+    # Vassalize the holder of this title
+    td_vassalize = {
         only_playable = yes
         filter = all
         ai_target_filter = none
@@ -43,14 +98,19 @@ title_decisions = {
         allow = { always = yes }
 
         effect = {
-            ROOT = { unsafe_destroy_landed_title = THIS }
+
+            # Vassalize this title
+            ROOT = {
+                holder_scope = {
+                    set_defacto_liege = FROM
+                }
+            }
+
         }
 
         revoke_allowed = { always = no }
 
         ai_will_do = { factor = 0 }
-
-    }#end td_destroy_title
-
+    }#end td_vassalize
 
 }#end title_decisions
