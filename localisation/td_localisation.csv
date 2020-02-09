@@ -30,3 +30,6 @@ td_force_usurp_desc;Forcefully usurp the title §Y[Root.GetFullName]§! from §Y[Ro
 
 td_cure_char;(TD) Cure Illness;;;;;;;;;;;;;x
 td_cure_char_desc;Cure any illness from §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x
+
+td_reveal;(TD) Reveal Secrets;;;;;;;;;;;;;x
+td_reveal_desc;Reveals plots and society for §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x

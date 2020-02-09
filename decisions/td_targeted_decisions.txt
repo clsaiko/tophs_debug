@@ -49,6 +49,7 @@ targeted_decisions = {
 
         potential = {
             is_alive = yes
+            is_ill = yes
         }#end potential block
 
         allow = {
@@ -62,5 +63,31 @@ targeted_decisions = {
         }#end effect block
     }#end td_cure_char
 
+    # Reveal a character's plots and society membership
+    td_reveal = {
+        filter = all
+        ai_target_filter = self
+        ai_check_interval = 24 # Determines how seldom the AI checks whether they can and should do the decision, in months. By default 1 (every month).
+        from_potential = {
+            #Conditions on the decision taker for the decision to appear.
+            ai = no								#no AI usage
+            #is_playable = yes					#playable characters only
+        }#end from_potential block
+
+        potential = {
+            is_alive = yes
+        }#end potential block
+
+        allow = {
+            #Conditions for the decision to be enabled
+            always = yes
+        }#end allow block
+
+        effect = {
+            #Commands executed when taking the decision
+            set_discovered_society = yes
+            reveal_plot = yes
+        }#end effect block
+    }#end td_reveal
 
 }#end targeted_decisions
