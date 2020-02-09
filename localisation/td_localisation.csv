@@ -27,3 +27,6 @@ td_kill_char_desc;End the life of §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x
 
 td_force_usurp;(TD) Force Usurp;;;;;;;;;;;;;x
 td_force_usurp_desc;Forcefully usurp the title §Y[Root.GetFullName]§! from §Y[Root.Holder.GetFullName]§!.;;;;;;;;;;;;;x
+
+td_cure_char;(TD) Cure Illness;;;;;;;;;;;;;x
+td_cure_char_desc;Cure any illness from §Y[Root.GetFullName]§!.;;;;;;;;;;;;;x
