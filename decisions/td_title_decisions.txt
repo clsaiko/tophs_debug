@@ -2,8 +2,13 @@
 #	File:	td_title_decisions.txt
 #	Author:	Chris Saiko
 # 	Desc:	Toph's Debug Title Decisions
+#
 #           td_destroy_title
 #           td_unsafe_destroy_title
+#           td_make_independent
+#           td_vassalize
+#           td_force_usurp
+#
 #################################
 
 title_decisions = {
